@@ -1,0 +1,34 @@
+version: '3.9'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: my-mongo-container
+    networks:
+      - my-mongo-network
+    restart: always
+    ports:
+      - "2717:27017"
+    volumes:
+      - mongodb-data:/data/db
+
+  nodejs:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    image: my-node-image
+    container_name: my-node-container
+    networks:
+      - my-mongo-network
+    depends_on:
+      - mongodb
+    
+
+
+networks:
+  my-mongo-network:
+    driver: bridge
+
+volumes:
+  mongodb-data:

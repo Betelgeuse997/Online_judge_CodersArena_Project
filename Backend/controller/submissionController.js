@@ -39,6 +39,12 @@ const generateInput = async (input) => {
 
 const executeCode = (filepath, language, inputPath) => {
   const Id = path.basename(filepath).split(".")[0];
+  let outputPath;
+  if (language == "java") {
+    outputPath = path.join(opPath, `${Id}.class`);
+  } else {
+    outputPath = path.join(opPath, `${Id}.exe`);
+  }
 
   let executeCmd;
 
@@ -58,14 +64,17 @@ const executeCode = (filepath, language, inputPath) => {
 
   return new Promise((resolve, reject) => {
     exec(executeCmd, (error, stdout, stderr) => {
-      error && reject({ error, stderr });
-      stderr && reject(stderr);
-      resolve(stdout);
+      if (error) {
+        reject({ error, stderr });
+      } else {
+        resolve(stdout);
+      }
     });
   });
 };
 
 const submitquestion = async (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
   const { code, userId, id, language, submittedAt } = req.body;
   console.log(code, userId, id, language, submittedAt);
   if (code === undefined) {
@@ -127,7 +136,6 @@ const submitquestion = async (req, res) => {
       const executionTime = executionEndTime - executionStartTime;
 
       const output = rawOutput.replace(/\r\n/g, "\n").trim();
-
       if (output !== testCase.output) {
         submissionStatus = `Test cases ${i + 1} failed`;
         return res.json({

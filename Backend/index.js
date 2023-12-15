@@ -22,7 +22,7 @@ async function connectWithRetry() {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       });
-      // await mongoose.connect('mongodb://127.0.0.1:2717/ojdb');
+      // await mongoose.connect('mongodb://127.0.0.1:27017/ojdb');
       console.log("Successfully connected to MongoDB");
       break;
     } catch (error) {

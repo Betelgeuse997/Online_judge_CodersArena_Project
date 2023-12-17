@@ -8,9 +8,29 @@ const submissionRoutes = require("./routes/submissions");
 // const {PORT} = require("./config.js");
 // import {PORT} from "./config.js";
 //import db from "./database/db.js";
-const PORT = 5000;
+
+// const path = require('path');
+
 const app = express();
 const corsOptions = require('./config/corsOptions');
+
+
+// const buildPath = path.resolve(__dirname, '../frontend/build');
+
+// app.use(express.static(buildPath));
+
+// app.get('/*', function (req, res) {
+//   res.sendFile(
+//     path.resolve(__dirname, '../frontend/build/index.html'),
+//     function (err) {
+//       if (err) {
+//         res.status(500).send(err);
+//       }
+//     }
+//   );
+// });
+
+const PORT = 5000;
 
 const mongoose = require('mongoose');
 

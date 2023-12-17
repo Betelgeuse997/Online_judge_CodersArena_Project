@@ -1,0 +1,91 @@
+/* html, body {
+  height: 100%;
+} 
+
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.card {
+    margin: 10rem auto;
+    padding: 2rem;
+    text-align: center;
+    width: 35%;
+    height:100%;
+    border: 2px solid #f1f1f1;
+    box-sizing: border-box;
+  }
+  
+  /* Center the image within the card */
+  /* .card img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 10px;
+  } */
+  
+  /* Center the error message and give it a red color */
+  .alert {
+    text-align: center;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  
+  /* Style the form labels and inputs */
+  .form-label {
+    font-weight: bold;
+    color: white; /* Set label text color to white */
+    display: block; /* Display labels as block elements */
+    margin-bottom: 1rem; /* Add some space below the labels */
+    font-size: 1.2em;
+  }
+  
+  .form-control {
+    margin-bottom: 2.5rem;
+    font-size: 1em;
+    /* width: 50%; */
+ 
+  }
+  
+  /* Style the submit button */
+  .btn {
+    width: 100%;
+    color: white; /* Set button text color to white */
+    background-color: #343a40; /* Set button background color */
+    border-color: #343a40;
+    font-size: 1.2em;
+  }
+  
+  /* Change the button color on hover */
+  .btn:hover {
+    background-color: #23272b; /* Darker color on hover */
+    border-color: #23272b;
+  }
+  
+  /* Add some spacing for the sign-up and forgot password links */
+  .form-text {
+    text-align: center;
+    margin-top: 1rem;
+    color: white; /* Set text color to white */
+    font-size: 1em;
+  }
+  
+  /* Style the links */
+  .form-text a {
+    font-weight: bold;
+    color: #9a9ea1;
+    text-decoration: none;
+    margin-left: 0.5rem;
+  }
+  
+  /* Change the link color on hover */
+  .form-text a:hover {
+    color: #007bff;
+  }
+  

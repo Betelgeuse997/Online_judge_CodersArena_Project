@@ -27,7 +27,7 @@ const ListQuestion = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`https://${BACK_SERVER_URL}:5000/question/${id}`, {
+            .get(`http://${BACK_SERVER_URL}:5000/question/${id}`, {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },

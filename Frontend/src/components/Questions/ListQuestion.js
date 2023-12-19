@@ -7,6 +7,7 @@ import { useAuth } from "../../context/AuthContext";
 import '../../CSS_Files/ListQuestion.css';
 import QuestionModal from "../QuestionModal";
 import { BsInfoCircle } from 'react-icons/bs';
+BACK_SERVER_URL = 3.7.68.95;
 
 const ListQuestion = () => {
     const [question, setQuestions] = useState({});
@@ -26,7 +27,7 @@ const ListQuestion = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`http://localhost:5000/question/${id}`, {
+            .get(`http://BACK_SERVER_URL:5000/question/${id}`, {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },

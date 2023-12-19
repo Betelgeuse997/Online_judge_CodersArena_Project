@@ -1,11 +1,11 @@
 import axios from "axios";
 // import { BACK_SERVER_URL } from "../config/config";
-BACK_SERVER_URL = 3.7.68.95;
+const BACK_SERVER_URL = '3.7.68.95';
 
 export const createUser = async (userData) => {
   try {
     const response = await axios.post(
-      'http://BACK_SERVER_URL:5000/user/signUp',
+      `http://${BACK_SERVER_URL}:5000/user/signUp`,
       userData
     );
     return response;
@@ -17,7 +17,7 @@ export const createUser = async (userData) => {
 export const getUser = async (userData) => {
   try {
     const response = await axios.post(
-      'http://BACK_SERVER_URL:5000/user/signIn',
+      `http://${BACK_SERVER_URL}:5000/user/signIn`,
       userData
     );
     return response;
@@ -29,7 +29,7 @@ export const getUser = async (userData) => {
 // export const forgotPassword = async (email) => {
 //   try {
 //     const response = await axios.post(
-//       `http://BACK_SERVER_URL:5000/user/forgotPassword`,
+//       `http://${BACK_SERVER_URL}:5000/user/forgotPassword`,
 //       { email }
 //     );
 //     return response.data;
@@ -40,7 +40,7 @@ export const getUser = async (userData) => {
 
 // export const resetPassword = async (password, token) => {
 //   try {
-//     const response = await axios.put(`http://BACK_SERVER_URL:5000/user/resetPassword`, {
+//     const response = await axios.put(`http://${BACK_SERVER_URL}:5000/user/resetPassword`, {
 //       password,
 //       token,
 //     });
@@ -57,7 +57,7 @@ export const getUser = async (userData) => {
 //     };
 
 //     const response = await axios.post(
-//       `http://BACK_SERVER_URL:5000/problems/add`,
+//       `http://${BACK_SERVER_URL}:5000/problems/add`,
 //       problemData,
 //       { headers }
 //     );
@@ -74,7 +74,7 @@ export const getUser = async (userData) => {
 //     };
 
 //     const response = await axios.get(
-//       `http://BACK_SERVER_URL:5000/problems/edit/${problemId}`,
+//       `http://${BACK_SERVER_URL}:5000/problems/edit/${problemId}`,
 //       { headers }
 //     );
 
@@ -91,7 +91,7 @@ export const getUser = async (userData) => {
 //     };
 
 //     const response = await axios.get(
-//       `http://BACK_SERVER_URL:5000/problems/${problemId}`,
+//       `http://${BACK_SERVER_URL}:5000/problems/${problemId}`,
 //       { headers }
 //     );
 
@@ -108,7 +108,7 @@ export const getUser = async (userData) => {
 //     };
 
 //     const response = await axios.put(
-//       `http://BACK_SERVER_URL:5000/problems/edit/${problemId}`,
+//       `http://${BACK_SERVER_URL}:5000/problems/edit/${problemId}`,
 //       problemData,
 //       { headers }
 //     );
@@ -124,7 +124,7 @@ export const getUser = async (userData) => {
 //     const headers = {
 //       Authorization: `Bearer ${token}`,
 //     };
-//     const response = await axios.get(`http://BACK_SERVER_URL:5000/problems/list`, {
+//     const response = await axios.get(`http://${BACK_SERVER_URL}:5000/problems/list`, {
 //       headers,
 //     });
 //     return response.data.data;
@@ -140,7 +140,7 @@ export const getUser = async (userData) => {
 //       Authorization: `Bearer ${token}`,
 //     };
 //     const response = await axios.delete(
-//       `http://BACK_SERVER_URL:5000/problems/delete/${problemId}`,
+//       `http://${BACK_SERVER_URL}:5000/problems/delete/${problemId}`,
 //       {
 //         headers,
 //       }
@@ -158,7 +158,7 @@ export const submitquestion = async (data, token) => {
       Accept:'application/json',
     };
     const response = await axios.post(
-      `http://BACK_SERVER_URL:5000/question/submit`,
+      `http://${BACK_SERVER_URL}:5000/question/submit`,
       data,
       
       {
@@ -176,7 +176,7 @@ export const fetchSubmissions = async (token) => {
     const headers = {
       Authorization: `Bearer ${token}`,
     };
-    const response = await axios.get(`http://BACK_SERVER_URL:5000/submissions/history`, {
+    const response = await axios.get(`http://${BACK_SERVER_URL}:5000/submissions/history`, {
       headers,
     });
     return response.data.data;
@@ -192,7 +192,7 @@ export const fetchSubmissions = async (token) => {
 //       Authorization: `Bearer ${token}`,
 //     };
 //     const response = await axios.get(
-//       `http://BACK_SERVER_URL:5000/submissions/leaderBoard`,
+//       `http://${BACK_SERVER_URL}:5000/submissions/leaderBoard`,
 //       {
 //         headers,
 //       }

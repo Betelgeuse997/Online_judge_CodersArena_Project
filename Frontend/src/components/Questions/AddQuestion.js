@@ -97,7 +97,7 @@ const AddQuestion = () => {
         }));
 
         setLoading(true);
-        axios.post(`http://${BACK_SERVER_URL}:5000/question/add`, data, {
+        axios.post(`https://${BACK_SERVER_URL}:5000/question/add`, data, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

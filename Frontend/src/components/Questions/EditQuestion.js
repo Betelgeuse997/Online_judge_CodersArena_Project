@@ -19,7 +19,7 @@ const EditQuestion = () => {
     const {id} = useParams();
     useEffect(() => {
         setLoading(true);
-        axios.get(`https://${BACK_SERVER_URL}:5000/question/${id}`, {
+        axios.get(`http://${BACK_SERVER_URL}:5000/question/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -44,7 +44,7 @@ const EditQuestion = () => {
             testCases,
         };
         setLoading(true);
-        axios.put(`https://${BACK_SERVER_URL}:5000/question/edit/${id}`, data,{
+        axios.put(`http://${BACK_SERVER_URL}:5000/question/edit/${id}`, data,{
             headers: {
               Authorization: `Bearer ${token}`,
             },

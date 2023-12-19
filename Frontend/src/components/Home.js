@@ -25,7 +25,7 @@ const Home = () => {
     useEffect(() => {
         setLoading(true);
         axios
-          .get(`http://${BACK_SERVER_URL}:5000/question/list`,{
+          .get(`https://${BACK_SERVER_URL}:5000/question/list`,{
             headers: {
               Authorization: `Bearer ${token}`,
               Accept:'application/json',

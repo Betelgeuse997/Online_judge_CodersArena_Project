@@ -10,7 +10,7 @@ import QuestionModal from "./QuestionModal";
 import '../CSS_Files/Home.css';
 import { useNavigate } from 'react-router-dom';
 import { fetchSubmissions } from "../services/api";
-BACK_SERVER_URL = 3.7.68.95;
+const BACK_SERVER_URL = '3.7.68.95';
 
 const Home = () => {
     const [submission, setSubmissions] = useState([]);
@@ -25,7 +25,7 @@ const Home = () => {
     useEffect(() => {
         setLoading(true);
         axios
-          .get('http://BACK_SERVER_URL:5000/question/list',{
+          .get(`http://${BACK_SERVER_URL}:5000/question/list`,{
             headers: {
               Authorization: `Bearer ${token}`,
               Accept:'application/json',

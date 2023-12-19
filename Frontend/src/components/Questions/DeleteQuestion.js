@@ -13,7 +13,7 @@ const DeleteQuestion = () => {
     const { id } = useParams();
     const handleDeleteQuestion = () => {
         setLoading(true);
-        axios.delete(`https://${BACK_SERVER_URL}:5000/question/delete/${id}`,{
+        axios.delete(`http://${BACK_SERVER_URL}:5000/question/delete/${id}`,{
             headers: {
               Authorization: `Bearer ${token}`,
             },

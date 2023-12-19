@@ -4,6 +4,7 @@ import Spinner from '../Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from "../../context/AuthContext";
+BACK_SERVER_URL = 3.7.68.95;
 
 const DeleteQuestion = () => {
     const [loading, setLoading] = useState(false);
@@ -12,7 +13,7 @@ const DeleteQuestion = () => {
     const { id } = useParams();
     const handleDeleteQuestion = () => {
         setLoading(true);
-        axios.delete(`http://localhost:5000/question/delete/${id}`,{
+        axios.delete(`http://BACK_SERVER_URL:5000/question/delete/${id}`,{
             headers: {
               Authorization: `Bearer ${token}`,
             },

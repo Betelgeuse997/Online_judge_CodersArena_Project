@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { useAuth } from '../../context/AuthContext';
 import '../../CSS_Files/EditQuestion.css'
-BACK_SERVER_URL = 3.7.68.95;
+const BACK_SERVER_URL = '3.7.68.95';
 
 const EditQuestion = () => {
     const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const EditQuestion = () => {
     const {id} = useParams();
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://BACK_SERVER_URL:5000/question/${id}`, {
+        axios.get(`http://${BACK_SERVER_URL}:5000/question/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -44,7 +44,7 @@ const EditQuestion = () => {
             testCases,
         };
         setLoading(true);
-        axios.put(`http://BACK_SERVER_URL:5000/question/edit/${id}`, data,{
+        axios.put(`http://${BACK_SERVER_URL}:5000/question/edit/${id}`, data,{
             headers: {
               Authorization: `Bearer ${token}`,
             },

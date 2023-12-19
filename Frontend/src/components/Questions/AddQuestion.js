@@ -9,6 +9,7 @@ import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { useAuth } from '../../context/AuthContext';
 import '../../CSS_Files/AddQuestion.css';
+BACK_SERVER_URL = 3.7.68.95;
 
 
 const AddQuestion = () => {
@@ -96,7 +97,7 @@ const AddQuestion = () => {
         }));
 
         setLoading(true);
-        axios.post('http://localhost:5000/question/add', data, {
+        axios.post('http://BACK_SERVER_URL:5000/question/add', data, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

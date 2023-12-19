@@ -51,7 +51,7 @@ const CodeEditor = () => {
 
     useEffect(() => {
       // Fetch the description when the component mounts
-      axios.get(`http://localhost:5000/question/${id}`, {
+      axios.get(`http://BACK_SERVER_URL:5000/question/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           Accept:'application/json',

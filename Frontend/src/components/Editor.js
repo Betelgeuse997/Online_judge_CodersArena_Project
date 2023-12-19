@@ -11,6 +11,7 @@ import 'ace-builds/src-noconflict/mode-java';
 import 'ace-builds/src-noconflict/mode-python';
 import 'ace-builds/src-noconflict/mode-c_cpp';
 import 'ace-builds/src-noconflict/theme-twilight';
+const BACK_SERVER_URL = '3.7.68.95';
 
 const CodeEditor = () => {
     const [language, setLanguage] = useState('');
@@ -51,7 +52,7 @@ const CodeEditor = () => {
 
     useEffect(() => {
       // Fetch the description when the component mounts
-      axios.get(`http://3.7.68.95:5000/question/${id}`, {
+      axios.get(`http://${BACK_SERVER_URL}:5000/question/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           Accept:'application/json',

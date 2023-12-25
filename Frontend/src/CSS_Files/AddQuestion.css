@@ -19,7 +19,11 @@
     box-sizing: border-box;
 }
 
- 
+ .dropdown {
+  left: 0%;
+  position: relative;
+  display: inline-block;
+}
 
 label {
     display: block;

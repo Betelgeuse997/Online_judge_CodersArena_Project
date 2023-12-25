@@ -170,7 +170,7 @@ const AddQuestion = () => {
                         onChange={handleInputChange}
                         />
                 </div> */}
-                <div class="dropdownaddquestion">
+                <div class="dropdown">
                 <button onClick={myFunction} class="dropbtn">{data.difficulty || 'Difficulty'}</button>
                   <div id="myDropdown" class="dropdown-content">
                       <a onClick={() => handleDropdownClick('Easy')}>Easy</a>

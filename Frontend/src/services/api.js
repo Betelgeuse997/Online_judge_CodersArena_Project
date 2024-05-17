@@ -1,6 +1,6 @@
 import axios from "axios";
 // import { BACK_SERVER_URL } from "../config/config";
-const BACK_SERVER_URL = '3.7.68.95';
+const BACK_SERVER_URL = '172.31.13.138';
 
 export const createUser = async (userData) => {
   try {

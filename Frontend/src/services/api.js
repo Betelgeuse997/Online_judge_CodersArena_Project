@@ -5,7 +5,7 @@ const BACK_SERVER_URL = '3.110.171.165';
 export const createUser = async (userData) => {
   try {
     const response = await axios.post(
-      `http://${BACK_SERVER_URL}:5000/user/signUp`,
+      `https://${BACK_SERVER_URL}:5000/user/signUp`,
       userData
     );
     return response;
@@ -17,7 +17,7 @@ export const createUser = async (userData) => {
 export const getUser = async (userData) => {
   try {
     const response = await axios.post(
-      `http://${BACK_SERVER_URL}:5000/user/signIn`,
+      `https://${BACK_SERVER_URL}:5000/user/signIn`,
       userData
     );
     return response;
@@ -158,7 +158,7 @@ export const submitquestion = async (data, token) => {
       Accept:'application/json',
     };
     const response = await axios.post(
-      `http://${BACK_SERVER_URL}:5000/question/submit`,
+      `https://${BACK_SERVER_URL}:5000/question/submit`,
       data,
       
       {
@@ -176,7 +176,7 @@ export const fetchSubmissions = async (token) => {
     const headers = {
       Authorization: `Bearer ${token}`,
     };
-    const response = await axios.get(`http://${BACK_SERVER_URL}:5000/submissions/history`, {
+    const response = await axios.get(`https://${BACK_SERVER_URL}:5000/submissions/history`, {
       headers,
     });
     return response.data.data;

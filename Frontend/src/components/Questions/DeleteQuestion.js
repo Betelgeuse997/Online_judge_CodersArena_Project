@@ -4,7 +4,7 @@ import Spinner from '../Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from "../../context/AuthContext";
-const BACK_SERVER_URL = '3.7.68.95';
+const BACK_SERVER_URL = '13.232.180.30';
 
 const DeleteQuestion = () => {
     const [loading, setLoading] = useState(false);

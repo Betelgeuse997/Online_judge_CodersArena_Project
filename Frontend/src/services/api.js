@@ -17,7 +17,7 @@ export const createUser = async (userData) => {
 export const getUser = async (userData) => {
   try {
     const response = await axios.post(
-      `http://${BACK_SERVER_URL}:5000/user/signIn`,
+      `https://${BACK_SERVER_URL}:5000/user/signIn`,
       userData
     );
     return response;

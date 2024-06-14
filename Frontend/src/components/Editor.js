@@ -11,7 +11,7 @@ import 'ace-builds/src-noconflict/mode-java';
 import 'ace-builds/src-noconflict/mode-python';
 import 'ace-builds/src-noconflict/mode-c_cpp';
 import 'ace-builds/src-noconflict/theme-twilight';
-const BACK_SERVER_URL = '3.7.68.95';
+const BACK_SERVER_URL = '13.232.180.30';
 
 const CodeEditor = () => {
     const [language, setLanguage] = useState('');

@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import { useAuth } from '../../context/AuthContext';
 import '../../CSS_Files/EditQuestion.css'
-const BACK_SERVER_URL = '3.7.68.95';
+const BACK_SERVER_URL = '13.232.180.30';
 
 const EditQuestion = () => {
     const [title, setTitle] = useState('');

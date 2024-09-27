@@ -10,7 +10,7 @@ import QuestionModal from "./QuestionModal";
 import '../CSS_Files/Home.css';
 import { useNavigate } from 'react-router-dom';
 import { fetchSubmissions } from "../services/api";
-const BACK_SERVER_URL = '13.232.180.30';
+const BACK_SERVER_URL = '65.1.107.21';
 
 const Home = () => {
     const [submission, setSubmissions] = useState([]);

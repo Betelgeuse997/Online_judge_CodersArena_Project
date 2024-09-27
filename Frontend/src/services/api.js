@@ -1,6 +1,6 @@
 import axios from "axios";
 // import { BACK_SERVER_URL } from "../config/config";
-const BACK_SERVER_URL = '13.232.180.30';
+const BACK_SERVER_URL = '65.1.107.21';
 
 export const createUser = async (userData) => {
   try {
@@ -17,7 +17,7 @@ export const createUser = async (userData) => {
 export const getUser = async (userData) => {
   try {
     const response = await axios.post(
-      `https://${BACK_SERVER_URL}:5000/user/signIn`,
+      `http://${BACK_SERVER_URL}:5000/user/signIn`,
       userData
     );
     return response;
